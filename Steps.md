@@ -10,5 +10,6 @@
 
 - [ ] Launch application in prod mode (with docker)
   Can't start, error in a docker, we will see later...
-- [ ] Run actual tests
-- [ ] Comming soon...
+- [x] Run actual tests
+  93 tests passed
+- [ ] Implement typescript
