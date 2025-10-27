@@ -37,3 +37,56 @@ After the TypeScript migration, the plan is to:
 > *Refactoring is the process of changing a software system in such a way that it does not alter the external behavior of the code yet  
 > improves its >internal structure.  
 > — Martin fowler*
+
+## Codebase knowledge
+
+### Tools
+
+### Runtime
+
+- Runtime : Nodejs > v16 (.nvmrc)
+- Package Manager :  npm
+- Javascript
+  - ES2018
+  - Modules ESM
+
+### Dev tools
+
+- Linter : eslint
+- Formatter : prettier
+- Precommit Hook : Husky (disable for the moment)
+- Test : ava
+
+### CI/DC 
+
+- Docker dev / prod
+
+### Backend
+
+- Websocket (ws)
+- Redis
+- Express
+
+
+## Architecture
+
+Most important files in ./src/web
+
+```bash
+src/
+├─ web/
+│  ├─ index.js            # Entry point
+│  ├─ server.js           # Initialize Redis queue, http server, websocket server 
+│  ├─ http.js             # Generate an Http Express server
+│  ├─ websocket.js        # Handling of received websocket messages
+│  ├─ queue.js            # Redis handler
+│  └─ actions.js          # Buisness logic
+
+```
+
+## Working Steps
+
+- [ ] Launch application in dev mode
+- [ ] Launch application in prod mode (with docker)
+- [ ] Run actual tests
+- [ ] Comming soon...
