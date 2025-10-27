@@ -54,12 +54,12 @@ After the TypeScript migration, the plan is to:
 
 - Linter : eslint
 - Formatter : prettier
-- Precommit Hook : Husky (disable for the moment)
 - Test : ava
 
 ### CI/DC 
 
 - Docker dev / prod
+- Precommit Hook : Husky (disable for the moment)
 
 ### Backend
 
@@ -86,7 +86,7 @@ src/
 
 ## Working Steps
 
-- [ ] Launch application in dev mode
+- [x] Launch application in dev mode
 - [ ] Launch application in prod mode (with docker)
 - [ ] Run actual tests
 - [ ] Comming soon...
