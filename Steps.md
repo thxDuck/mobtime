@@ -19,7 +19,7 @@
 To run the `npm run dev` command, we need to have a redis server running. I add a docker-compose for this, now i can test the application on my host.
 
 ```bash 
-docker compose -f docker-compose-redis.yml up                                                                                                                                                     
+docker compose -f docker-compose-redis.yml up -d
 ```
 
 Add Typescript package and @types/node. To compile, there are some commands:
@@ -28,3 +28,12 @@ Add Typescript package and @types/node. To compile, there are some commands:
 "start:build": "node ./dist/index.js",    # Run transpilled code
 "build": "tsc"                            # Transpile al js/ts files in ./dist
 ```
+
+### Migrating JS to TS
+
+Start with Id generator : 
+
+- Improve security : Replace Math.random by crypto.randomBytes
+- Improve strength : Method always return same length
+- Add tests for regressions
+  
